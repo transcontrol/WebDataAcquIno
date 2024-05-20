@@ -16,5 +16,5 @@ void loop() {
   Serial.println(0);
   }
 //definição do delay em milisegundos, 1000ms = 1 segundo
-  delay(1000);
+  delay(1500);
 }

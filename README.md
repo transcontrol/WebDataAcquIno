@@ -1,4 +1,4 @@
-<img src="https://ibb.co/xsxs2wm" width="600px">
+<img src="https://i.postimg.cc/gwB8hjsS/1.png" width="500px">
 
 _Data Acquisition Arduino API = API Arduino para Aquisição de Dados_
 

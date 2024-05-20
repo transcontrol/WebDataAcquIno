@@ -16,10 +16,10 @@ const HABILITAR_OPERACAO_INSERIR = true;
 
 // Função para comunicação serial
 const serial = async (
-    valoresDht11Umidade,
-    valoresDht11Temperatura,
-    valoresLuminosidade,
-    valoresLm35Temperatura,
+    // valoresDht11Umidade,
+    // valoresDht11Temperatura,
+    // valoresLuminosidade,
+    // valoresLm35Temperatura,
     valoresChave
 ) => {
     let poolBancoDados = ''
@@ -99,10 +99,10 @@ const serial = async (
 // não altere!
 // Função para criar e configurar o servidor web
 const servidor = (
-    valoresDht11Umidade,
-    valoresDht11Temperatura,
-    valoresLuminosidade,
-    valoresLm35Temperatura,
+    // valoresDht11Umidade,
+    // valoresDht11Temperatura,
+    // valoresLuminosidade,
+    // valoresLm35Temperatura,
     valoresChave
 ) => {
     const app = express();
@@ -117,6 +117,7 @@ const servidor = (
     // Inicia o servidor na porta especificada
     app.listen(SERVIDOR_PORTA, () => {
         console.log(`
+        
     88888888888                                 .d8888b.                    888                    888 
         888                                    d88P  Y88b                   888                    888 
         888                                    888    888                   888                    888 
@@ -130,18 +131,18 @@ const servidor = (
     });
 
     // Define os endpoints da API para cada tipo de sensor
-    app.get('/sensores/dht11/umidade', (_, response) => {
-        return response.json(valoresDht11Umidade);
-    });
-    app.get('/sensores/dht11/temperatura', (_, response) => {
-        return response.json(valoresDht11Temperatura);
-    });
-    app.get('/sensores/luminosidade', (_, response) => {
-        return response.json(valoresLuminosidade);
-    });
-    app.get('/sensores/lm35/temperatura', (_, response) => {
-        return response.json(valoresLm35Temperatura);
-    });
+    // app.get('/sensores/dht11/umidade', (_, response) => {
+    //     return response.json(valoresDht11Umidade);
+    // });
+    // app.get('/sensores/dht11/temperatura', (_, response) => {
+    //     return response.json(valoresDht11Temperatura);
+    // });
+    // app.get('/sensores/luminosidade', (_, response) => {
+    //     return response.json(valoresLuminosidade);
+    // });
+    // app.get('/sensores/lm35/temperatura', (_, response) => {
+    //     return response.json(valoresLm35Temperatura);
+    // });
     app.get('/sensores/chave', (_, response) => {
         return response.json(valoresChave);
     });
@@ -150,27 +151,27 @@ const servidor = (
 // Função principal assíncrona para iniciar a comunicação serial e o servidor web
 (async () => {
     // Arrays para armazenar os valores dos sensores
-    const valoresDht11Umidade = [];
-    const valoresDht11Temperatura = [];
-    const valoresLuminosidade = [];
-    const valoresLm35Temperatura = [];
+    // const valoresDht11Umidade = [];
+    // const valoresDht11Temperatura = [];
+    // const valoresLuminosidade = [];
+    // const valoresLm35Temperatura = [];
     const valoresChave = [];
 
     // Inicia a comunicação serial
     await serial(
-        valoresDht11Umidade,
-        valoresDht11Temperatura,
-        valoresLuminosidade,
-        valoresLm35Temperatura,
+        // valoresDht11Umidade,
+        // valoresDht11Temperatura,
+        // valoresLuminosidade,
+        // valoresLm35Temperatura,
         valoresChave
     );
 
     // Inicia o servidor web
     servidor(
-        valoresDht11Umidade,
-        valoresDht11Temperatura,
-        valoresLuminosidade,
-        valoresLm35Temperatura,
+        // valoresDht11Umidade,
+        // valoresDht11Temperatura,
+        // valoresLuminosidade,
+        // valoresLm35Temperatura,
         valoresChave
     );
 })();
