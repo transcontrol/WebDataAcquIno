@@ -1,4 +1,4 @@
-<img src="https://user-images.githubusercontent.com/46379117/189931169-9df7b283-bf43-4af4-8154-b1669862090e.png" width="600px">
+<img src="https://ibb.co/xsxs2wm" width="600px">
 
 _Data Acquisition Arduino API = API Arduino para Aquisição de Dados_
 
@@ -6,11 +6,21 @@ _Data Acquisition Arduino API = API Arduino para Aquisição de Dados_
 
 # Como usar
 
-1. Certifique-se de que o Arduino está em funcionamento e capturando dados de temperatura, umidade, luminosidade e proximidade utilizando os sensores DHT11, TRC5000, LDR e LM35.
+1. Preparando o Arduino e o sensor TRC5000:
 
-1. Clone este repositório em sua máquina.
+    - Primeiro, monte o sensor TRC5000 no Arduino de acordo com as instruções seguintes.
 
-1. Acesse o arquivo **main.js** e parametrize:
+    <img src="https://www.arduinoecia.com.br/wp-content/uploads/2013/10/Sensor-Optico-Teste-sem-led-1024x499.jpg" width="400px">
+
+    - Em seguida, inicialize o arquivo "CodigoTRANSCONTROLardu.ino", é necessario ter a IDE do Arduino para conseguir executar o codigo 
+    
+    - conecte o Arduino ao seu computador usando o cabo USB apropriado.
+
+    - Certifique-se de que o código do Arduino esteja carregado e funcionando corretamente. 
+
+2. Clone este repositório em sua máquina.
+
+3. Acesse o arquivo **main.js** e parametrize:
 
 - Gostaria de efetuar a inserção dos dados capturados no Banco de Dados? **Linha 15 - HABILITAR_OPERACAO_INSERIR;**
 
