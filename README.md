@@ -1,4 +1,4 @@
-<img src="https://i.postimg.cc/gwB8hjsS/1.png" width="500px">
+<img src="https://i.postimg.cc/gwB8hjsS/1.png" width="200px">
 
 _Data Acquisition Arduino API = API Arduino para Aquisição de Dados_
 
@@ -18,13 +18,17 @@ _Data Acquisition Arduino API = API Arduino para Aquisição de Dados_
 
     - Certifique-se de que o código do Arduino esteja carregado e funcionando corretamente. 
 
-2. Clone este repositório em sua máquina.
+2. Clone este repositório em sua máquina com o seguinte comando:
+
+```
+git clone https://github.com/transcontrol/WebDataAcquIno.git
+``` 
 
 3. Acesse o arquivo **main.js** e parametrize:
 
-- Gostaria de efetuar a inserção dos dados capturados no Banco de Dados? **Linha 15 - HABILITAR_OPERACAO_INSERIR;**
+    - Gostaria de efetuar a inserção dos dados capturados no Banco de Dados? **Linha 15 - HABILITAR_OPERACAO_INSERIR;**
 
-- Para configurar as credenciais do banco de dados: adicione as credenciais para inserção no banco MySQL (**Linhas 32 - 36**) e ajuste seu INSERT para que esteja de acordo com a tabela que receberá as medidas (**Linhas 84 e 85**).
+    - Para configurar as credenciais do banco de dados: adicione as credenciais para inserção no banco MySQL (**Linhas 32 - 36**) e ajuste seu INSERT para que esteja de acordo com a tabela que receberá as medidas (**Linhas 84 e 85**).
 
 4. Acesse o local deste repositório no terminal (GitBash ou VSCode) e execute os comandos abaixo:
 
