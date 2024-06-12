@@ -29,7 +29,7 @@ const serial = async (
         {
             // altere!
             // Credenciais do banco de dados
-            host: 'localhost',
+            host: '10.18.32.19',
             user: 'aluno',
             password: 'Sptech#2024',
             database: 'TransControl',
@@ -66,25 +66,30 @@ const serial = async (
         // const lm35Temperatura = parseFloat(valores[2]);
         // const luminosidade = parseFloat(valores[3]);
         const chave = parseInt(valores[0]);
+        let chaveSimulacao = chave
 
         // Armazena os valores dos sensores nos arrays correspondentes
         // valoresDht11Umidade.push(dht11Umidade);
         // valoresDht11Temperatura.push(dht11Temperatura);
         // valoresLuminosidade.push(luminosidade);
         // valoresLm35Temperatura.push(lm35Temperatura);
-        valoresChave.push(chave);
 
         // Insere os dados no banco de dados (se habilitado)
+        if(chaveSimulacao == 0){
+            return
+        } else {
+            chaveSimulacao = chave * Number(Math.random() * 9 + 1).toFixed(0)
         if (HABILITAR_OPERACAO_INSERIR) {
 
-            // altere!
+             // altere!
             // Este insert irá inserir os dados na tabela "medida"
             await poolBancoDados.execute(
                 'INSERT INTO dados (ativacao, fkSensor) VALUES (?, 81)',
-                [chave]
+                [chaveSimulacao]
             );
-            console.log("valores inseridos no banco: " + chave)
+            console.log("valores inseridos no banco: " + chaveSimulacao)
         
+           }
         }
         
     });
